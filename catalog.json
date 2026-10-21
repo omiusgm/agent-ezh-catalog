@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "brand": "Агент Ёж",
+  "author": "Владимир",
+  "owner": "omiusgm",
+  "catalog_url": "https://github.com/omiusgm/agent-ezh-catalog",
+  "updated_at": "2026-10-21",
+  "solutions": [
+    {
+      "id": "mail",
+      "title": "Gmail и Яндекс Почта для агента",
+      "kind": "integration_guide_and_example",
+      "status": "published",
+      "repository": "https://github.com/omiusgm/agent-mail-setup",
+      "readme": "https://github.com/omiusgm/agent-mail-setup/blob/main/README.md",
+      "agent_handoff": "https://github.com/omiusgm/agent-mail-setup/blob/main/docs/agent-handoff.md",
+      "capabilities": [
+        "Gmail: подключение штатной интеграции и проверка аккаунта",
+        "Яндекс: IMAP-поиск, чтение архива и папок, выбранные вложения",
+        "Пересылка новых входящих Яндекса в Gmail",
+        "Диагностика TLS и маршрута без VPN"
+      ],
+      "platforms": [
+        "macOS для локального примера Яндекса",
+        "Поддерживаемый клиент с интеграцией Gmail"
+      ],
+      "requirements": [
+        "Python 3.11+ для примера Яндекса",
+        "Личный пароль приложения Яндекса в macOS Keychain",
+        "Отдельная авторизация Gmail на выбранной платформе"
+      ],
+      "dependencies": [],
+      "limitations": [
+        "Read-only MCP не отправляет и не удаляет письма",
+        "Пересылка не переносит старый архив и не синхронизирует папки",
+        "Доступность облака и другого компьютера проверяется отдельно",
+        "Вход Gmail через OAuth выполняется средствами платформы, собственного Gmail коннектора в репозитории нет"
+      ],
+      "verified_on": "2026-10-21",
+      "verification": "Проверены чистая установка, 14 offline-тестов, MCP stdio, IMAP/TLS и чтение синтетического теста на одном Mac."
+    },
+    {
+      "id": "telegram",
+      "title": "Личный Telegram для AI-агента",
+      "kind": "integration_guide_and_example",
+      "status": "published",
+      "repository": "https://github.com/omiusgm/agent-telegram-setup",
+      "readme": "https://github.com/omiusgm/agent-telegram-setup/blob/main/README.md",
+      "agent_handoff": "https://github.com/omiusgm/agent-telegram-setup/blob/main/docs/agent-handoff.md",
+      "capabilities": [
+        "Личный аккаунт Telegram через MTProto и локальный MCP",
+        "Диалоги, поиск и чтение доступной истории",
+        "QR-вход или локальный ввод телефона/кода, ветка 2FA",
+        "Отправка текста и выбранных файлов в отдельных разрешаемых профилях",
+        "Блокировка одновременного использования одной сессии"
+      ],
+      "platforms": [
+        "Проверенный пакет для macOS / Apple Silicon / Python 3.11",
+        "Windows не поддерживается примером; Linux не проверен"
+      ],
+      "requirements": [
+        "Собственные Telegram API ID и API Hash",
+        "Собственный вход Telegram на телефоне и пароль 2FA при его наличии",
+        "Python 3.11+, Git и uv для установщика",
+        "Защищённое локальное хранение сессии и один процесс на сессию"
+      ],
+      "dependencies": [],
+      "limitations": [
+        "По умолчанию read-only; отправка подключается отдельно и требует конкретного поручения",
+        "Это личный аккаунт, не Bot API; токен бота не заменяет пользовательскую сессию",
+        "Нет Secret Chats, восстановления удалённых сообщений и автоматической расшифровки голосовых",
+        "Сессия хранится в локальном файле с правами 600, а не в зашифрованном хранилище",
+        "Лимиты файлов и аккаунта нужно проверять перед большой отправкой; облако не наследует локальную сессию"
+      ],
+      "verified_on": "2026-10-21",
+      "verification": "Проверены опубликованные README и описание верификации: чистая установка, 10 offline-тестов и MCP-профили. Живое чтение исходной настройки подтверждено в её чате; каждый клиент должен войти и проверить свой аккаунт отдельно."
+    },
+    {
+      "id": "ai-guide",
+      "title": "AI Setup Guide",
+      "kind": "reference_guide",
+      "status": "published",
+      "repository": "https://github.com/omiusgm/ai-setup-guide",
+      "readme": "https://github.com/omiusgm/ai-setup-guide/blob/main/README.md",
+      "agent_handoff": "https://github.com/omiusgm/ai-setup-guide/blob/main/docs/for-agents.md",
+      "capabilities": [
+        "Обзор инструментов, промптов и рабочих схем",
+        "Память и контекст агента",
+        "Вводные материалы по MCP, автоматизации и CRM"
+      ],
+      "platforms": [
+        "Публичная документация для людей и агентов"
+      ],
+      "requirements": [
+        "Отдельная проверка инструкций выбранного инструмента"
+      ],
+      "dependencies": [],
+      "limitations": [
+        "Справочный гайд не предоставляет доступ к аккаунтам",
+        "Наличие раздела об инструменте не подтверждает его установку или текущую работоспособность"
+      ],
+      "verified_on": "2026-10-21",
+      "verification": "Проверены публичный репозиторий и его README; настройки всех описанных инструментов отдельно не тестировались."
+    }
+  ]
+}
