@@ -10,7 +10,7 @@ Telegram, почта и другие привычные сервисы поле�
 
 | Сервис | Что можно подключить | Готовность |
 | --- | --- | --- |
-| [Ёж Telegram MCP](https://github.com/omiusgm/agent-telegram-setup) | Личный Telegram, история, поиск, профили и опциональные вложения; локальный мастер и Linux gateway | Публичный пакет; каждый аккаунт и облачный клиент проверяются отдельно |
+| [Ёж Telegram MCP](https://github.com/omiusgm/agent-telegram-setup) | Личный Telegram, история, поиск, профили, опциональные вложения и [расшифровка голосовых](https://github.com/omiusgm/agent-telegram-setup/blob/main/docs/native-transcription.md); локальный мастер и Linux gateway | Пилот; каждый аккаунт и облачный клиент проверяются отдельно |
 | [Почта Gmail и Яндекс](https://github.com/omiusgm/agent-mail-setup) | Gmail через штатную интеграцию; Яндекс через локальный MCP на чтение | Проверенный пример для macOS; свой вход владельца |
 | [Ёж Bark](https://github.com/omiusgm/agent-bark-setup) | Важные уведомления агентов на iPhone | Пилот; не заменяет ответ или согласование |
 | [Яндекс Музыка](https://github.com/omiusgm/agent-yandex-music) | Метаданные, плейлисты и подготовка объединения | Публичный пакет; запись только по отдельному поручению |
