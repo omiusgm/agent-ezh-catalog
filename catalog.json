@@ -4,7 +4,7 @@
   "author": "Владимир",
   "owner": "omiusgm",
   "catalog_url": "https://github.com/omiusgm/agent-ezh-catalog",
-  "updated_at": "2026-10-28",
+  "updated_at": "2026-11-03",
   "solutions": [
     {
       "id": "mail",
@@ -38,6 +38,39 @@
       ],
       "verified_on": "2026-10-21",
       "verification": "Проверены чистая установка, 14 offline-тестов, MCP stdio, IMAP/TLS и чтение синтетического теста на одном Mac."
+    },
+    {
+      "id": "computer",
+      "title": "Ёж Computer MCP — SSH к своим компьютерам",
+      "kind": "mcp_pilot",
+      "status": "published",
+      "maturity": "pilot",
+      "repository": "https://github.com/omiusgm/agent-computer-setup",
+      "readme": "https://github.com/omiusgm/agent-computer-setup/blob/main/README.md",
+      "agent_handoff": "https://github.com/omiusgm/agent-computer-setup/blob/main/docs/AGENT.md",
+      "capabilities": [
+        "Команды и длительные SSH-сеансы на своих компьютерах",
+        "Передача файлов через SCP между SSH-целью и машиной MCP",
+        "Проверка локальных условий, настоящего MCP stdio и план регистрации в Codex"
+      ],
+      "platforms": [
+        "macOS и Linux с Python 3.10+ и OpenSSH"
+      ],
+      "requirements": [
+        "Собственные уже настроенные SSH-маршруты и проверенные host keys",
+        "Доверенный агент и выбранные владельцем права учётной записи",
+        "Отдельное защищённое подключение для облачного агента"
+      ],
+      "dependencies": [],
+      "limitations": [
+        "Широкий community SSH-сервер, не песочница и не личный адаптер с ограничением целей",
+        "Не содержит личных request_id-квитанций и гарантии однократного выполнения",
+        "SCP не доказывает получение вложения облачным агентом",
+        "Чистая установка новым владельцем и его облачный вызов ещё не приняты",
+        "Управление экраном и мышью не входит; OS reboot не проверен и не включается автоматически"
+      ],
+      "verified_on": "2026-11-03",
+      "verification": "27 публичных файлов сверены с GitHub; 16 offline-тестов, vendor hashes и stdio discovery 17 инструментов прошли, GitHub CI успешен. Включены неизменённые MIT-исходники slepp/ssh-mcp на закреплённом commit. Реальные машины не использовались в этой приёмке."
     },
     {
       "id": "telegram",
