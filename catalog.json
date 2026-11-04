@@ -4,7 +4,7 @@
   "author": "Владимир",
   "owner": "omiusgm",
   "catalog_url": "https://github.com/omiusgm/agent-ezh-catalog",
-  "updated_at": "2026-11-03",
+  "updated_at": "2026-11-04",
   "solutions": [
     {
       "id": "mail",
@@ -71,6 +71,41 @@
       ],
       "verified_on": "2026-11-03",
       "verification": "27 публичных файлов сверены с GitHub; 16 offline-тестов, vendor hashes и stdio discovery 17 инструментов прошли, GitHub CI успешен. Включены неизменённые MIT-исходники slepp/ssh-mcp на закреплённом commit. Реальные машины не использовались в этой приёмке."
+    },
+    {
+      "id": "codex",
+      "title": "Ёж Codex MCP — чаты и задачи разных профилей",
+      "kind": "mcp_pilot",
+      "status": "published",
+      "maturity": "experimental-source-preview",
+      "repository": "https://github.com/omiusgm/agent-codex-setup",
+      "readme": "https://github.com/omiusgm/agent-codex-setup/blob/main/README.md",
+      "agent_handoff": "https://github.com/omiusgm/agent-codex-setup/blob/main/README.md",
+      "capabilities": [
+        "Шесть команд: профили, список чатов, чтение чата, отправка задачи, уточнение и остановка",
+        "Существующие UUID и раздельные профили на нескольких компьютерах",
+        "Квитанции и защита от повторов; точный guard активного хода",
+        "Исходники backend, dispatcher, owner-адаптеров и синтетические примеры"
+      ],
+      "platforms": [
+        "macOS и Linux; Python 3.11+"
+      ],
+      "requirements": [
+        "Собственный вход в Codex Desktop/CLI для каждого профиля",
+        "Официальный Python MCP SDK 1.30.0 и зависимости из requirements.lock",
+        "Установленные владельцем Node и ws для socket-транспорта; отдельная проверка версий",
+        "Уже настроенный SSH для удалённых компьютеров и явно выбранные права клиента"
+      ],
+      "dependencies": [],
+      "limitations": [
+        "Экспериментальный комплект исходников для ручной настройки; автоматического мастера установки пока нет",
+        "Новая установка, внешние native runtime и вызов облачного агента требуют отдельной приёмки",
+        "Код не содержит Codex/Node/ws, авторизацию, SSH-ключи или личные профили",
+        "Штатные подтверждения Codex сохраняются; MCP не выдаёт автоматическое разрешение",
+        "Прошедшие offline-тесты не доказывают доступность аккаунта, сети или конкретного компьютера"
+      ],
+      "verified_on": "2026-11-04",
+      "verification": "58 публичных файлов сверены с точным allowlist; 196 тестов чистой распаковки, независимые проверки границ и GitHub CI прошли. Живые личные установки и новый владелец не подменяются этой проверкой."
     },
     {
       "id": "telegram",
